@@ -20,8 +20,8 @@ The following sections explain how to use the scripts for processing simulation 
 
 | Column Name   | Meaning       | Importance (*)  | Initial parameter? |
 | ------------- |:-------------:| :-----:| ----------|
-| ident     	| unique system identifier | high | |
-| it   			| iteration index      |   none | |
+| ident     	| unique system identifier | high | Y |
+| it   			| iteration index      |   none | Y |
 | t 			| simulation time (yr)      | low    | Y |
 | a(i)			| planet semi-major axis (AU)| high		| |
 | emegas(i)		| planet gas mass (M_earth) | medium | |
