@@ -6,16 +6,9 @@ Repositorio para datos del proyecto PACA de síntesis planetaria
 
 The following sections explain how to use the scripts for processing simulation data.
 
-### If using repo locally
+### Using filtered.zip
 
-- Clone this repo (planetas_data)
-- Choose a .zip (say `properyam.zip`) that is already in the repo (and was added after 11-04-17, older .zip files might not be complete for the pipeline to work properly)
-- Use a py27 environment (I know, I know)
-- Type in your terminal `sh pipeline.sh properyam` or whatever your .zip filename prefix is. Note: do not include the .zip portion.
-- Your processed data and simulation info is now in the `/properyam/` folder (or whatever the name of your .zip filename prefix is).
-- Raw data will be in finalresults.csv (containing info on all the planets).
-- Reduced data (containing consolidated info on each system) will be in terrestrial.txt and giant.txt. The corresponding header is in header.txt. This format is not ideal but it was requested by my student.
-- In filtered.csv there will be 3 csv files (no perturbation, low perturbation, and high perturbation) with the following columns:
+- In filtered.zip there will be 3 csv files (no perturbation, low perturbation, and high perturbation) with the following columns:
 
 
 | Column Name   | Meaning       | Importance (*)  | Initial parameter? |
@@ -44,6 +37,16 @@ The following sections explain how to use the scripts for processing simulation 
 - The master distributions for systems in filtered are:
 ![](distributions.png?raw=true)
 - All three files in filtered.csv were generated using the same initial parameters except for the perturbation parameter Apert (=0,0.1,0.3).
+
+### If using repo locally
+
+- Clone this repo (planetas_data)
+- Choose a .zip in the following list: `properyam.zip pab*.zip yamqc*.zip`. Other zip files in the repo are not formatted for data reduction pipeline, so you can just unzip them and look inside.
+- Use a py27 environment (I'll get to that soonish)
+- Type in your terminal `sh pipeline.sh properyam` or whatever your .zip filename prefix is. Note: do not include the .zip portion.
+- Your processed data and simulation info is now in the `/properyam/` folder (or whatever the name of your .zip filename prefix is).
+- Raw data will be in finalresults.csv (containing info on all the planets).
+- Reduced data (containing consolidated info on each system) will be in terrestrial.txt and giant.txt. The corresponding header is in header.txt. This format is not ideal but it was requested by my student.
 
 ## Specific use - Analysis tools
 
