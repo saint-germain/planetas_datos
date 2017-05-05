@@ -38,6 +38,7 @@ The following sections explain how to use the scripts for processing simulation 
 | taugas | gas dissipation timescale (yr) | high | 
 
 * For data in filtered.zip, the master distributions are:
+![](distributions.png?raw=true)
 
 - Reduced data (containing consolidated info on each system) will be in terrestrial.txt and giant.txt. The corresponding header is in header.txt. This format is not ideal but it was requested by my student.
 
