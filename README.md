@@ -14,33 +14,36 @@ The following sections explain how to use the scripts for processing simulation 
 - Type in your terminal `sh pipeline.sh properyam` or whatever your .zip filename prefix is. Note: do not include the .zip portion.
 - Your processed data and simulation info is now in the `/properyam/` folder (or whatever the name of your .zip filename prefix is).
 - Raw data will be in finalresults.csv (containing info on all the planets).
-
-
-| Column Name   | Meaning       | Importance (*)  |
-| ------------- |:-------------:| :-----:|
-| ident     	| unique system identifier | high |
-| it   			| iteration index      |   none |
-| t 			| simulation time (yr)      | low    |
-| a(i)			| planet semi-major axis (AU)| high		|
-| emegas(i)		| planet gas mass (M_earth) | medium |
-| emepla(i)/emet| planet solid mass (M_earth)| high |
-| rplanet(i)/radtie| planet solid radius | low |
-| emestar		| stellar mass (g) | high |
-| rc            | disk outer cutoff radius (AU) | high |
-| qest | Toomre Q at min radius | none |
-| sigmag_0 | maximum dust surface density (g/cm^3) | high |
-| emed | disk mass (M_sun) | high |
-| gama | surface density power law exponent | none |
-| apert | perturbation amplitude | high|
-| fpert | perturbation length scale | none |
-| constmigI | type I migration rate | none |
-| emetal | metallicity wrt solar | high |
-| taugas | gas dissipation timescale (yr) | high | 
-
-(*) For data in filtered.zip, the master distributions are:
-![](distributions.png?raw=true)
-
 - Reduced data (containing consolidated info on each system) will be in terrestrial.txt and giant.txt. The corresponding header is in header.txt. This format is not ideal but it was requested by my student.
+- In filtered.csv there will be 3 csv files (no perturbation, low perturbation, and high perturbation) with the following columns:
+
+
+| Column Name   | Meaning       | Importance (*)  | Initial parameter? |
+| ------------- |:-------------:| :-----:| ----------|
+| ident     	| unique system identifier | high | |
+| it   			| iteration index      |   none | |
+| t 			| simulation time (yr)      | low    | Y |
+| a(i)			| planet semi-major axis (AU)| high		| |
+| emegas(i)		| planet gas mass (M_earth) | medium | |
+| emepla(i)/emet| planet solid mass (M_earth)| high | |
+| rplanet(i)/radtie| planet solid radius | low | |
+| emestar		| stellar mass (g) | high | Y |
+| rc            | disk outer cutoff radius (AU) | high | Y |
+| qest | Toomre Q at min radius | none | Y |
+| sigmag_0 | maximum dust surface density (g/cm^3) | high | Y |
+| emed | disk mass (M_sun) | high | Y |
+| gama | surface density power law exponent | none |Y 
+| apert | perturbation amplitude | high|Y 
+| fpert | perturbation length scale | none |Y 
+| constmigI | type I migration rate | none |Y 
+| emetal | metallicity wrt solar | high |Y 
+| taugas | gas dissipation timescale (yr) | high | Y 
+
+(*) For data in filtered.zip
+
+- The master distributions for systems in filtered are:
+![](distributions.png?raw=true)
+- All three files in filtered.csv were generated using the same initial parameters except for the perturbation parameter Apert (=0,0.1,0.3).
 
 ## Specific use - Analysis tools
 
