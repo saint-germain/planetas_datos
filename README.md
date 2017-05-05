@@ -36,7 +36,7 @@ The following sections explain how to use the scripts for processing simulation 
 
 - The master distributions for systems in filtered are:
 ![](distributions.png?raw=true)
-- All three files in filtered.csv were generated using the same initial parameters except for the perturbation parameter Apert (=0,0.1,0.3).
+- All three files in filtered.zip were generated using the same initial parameters except for the perturbation parameter Apert (=0,0.1,0.3).
 
 ### If using repo locally
 
