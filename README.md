@@ -16,7 +16,7 @@ The following sections explain how to use the scripts for processing simulation 
 - Raw data will be in finalresults.csv (containing info on all the planets).
 
 
-| Column Name   | Meaning       | Importance*  |
+| Column Name   | Meaning       | Importance (*)  |
 | ------------- |:-------------:| :-----:|
 | ident     	| unique system identifier | high |
 | it   			| iteration index      |   none |
@@ -37,7 +37,7 @@ The following sections explain how to use the scripts for processing simulation 
 | emetal | metallicity wrt solar | high |
 | taugas | gas dissipation timescale (yr) | high | 
 
-* For data in filtered.zip, the master distributions are:
+(*) For data in filtered.zip, the master distributions are:
 ![](distributions.png?raw=true)
 
 - Reduced data (containing consolidated info on each system) will be in terrestrial.txt and giant.txt. The corresponding header is in header.txt. This format is not ideal but it was requested by my student.
