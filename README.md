@@ -42,16 +42,18 @@ The following sections explain how to use the scripts for processing simulation 
 
 - Clone this repo (planetas_data)
 - Choose a .zip in the following list: `properyam.zip pab*.zip yamqc*.zip`. Other zip files in the repo are not formatted for data reduction pipeline, so you can just unzip them and look inside.
-- Use a py27 environment (I'll get to that soonish)
-- Type in your terminal `sh pipeline.sh properyam` or whatever your .zip filename prefix is. Note: do not include the .zip portion.
+- Type in your terminal `sh pipeline.sh properyam` or whatever your chosen .zip filename prefix is. Note: do not include the .zip portion.
 - Your processed data and simulation info is now in the `/properyam/` folder (or whatever the name of your .zip filename prefix is).
 - Raw data will be in finalresults.csv (containing info on all the planets).
-- Reduced data (containing consolidated info on each system) will be in tr_finalresults.csv and gt_finalresults.csv. See below for more information.
+- Reduced data (containing consolidated info on each system) will be in `tr_finalresults.csv` and `gt_finalresults.csv`. See below for more information.
+- Simulation data is in some .txt files as described in the output to `pipeline.sh`
 
 ## Specific use - Analysis tools
 
-- `quality.py` creates some diagnostic .txt files. It is meant to be used as `python quality.py createdfiles.txt totalsims.txt finished.txt` within a folder that also contains the `results/` folder. Part of this code can be played with in `parallel_sandbox.ipynb`.
-- `reduce.py` is meant to be used with `finalresults.csv` files created by `pipeline.sh`. This python script creates two data files, `tr_finalresults.csv` and `gt_finalresults.csv`. The data files contain Center of Mass, Number of Planets, Mass budget for planets, Mass efficiency (mass budget/disk mass), Sigmag0 (maximum solid surface density), Disk Mass, Characteristic radius, Stellar Mass, Metallicity and Gas depletion timescale information for each simulation. `tr_finalresults.txt` has this information for planets below 10 earth masses, and `gt_finalresults.txt` for planets above 10 earth masses. It should be used as `python reduce.py finalresults.csv`. Part of this  code can be played with in `planets_sandbox.ipynb`. 
+- `quality.py` creates some diagnostic .txt files. It is meant to be used as `python quality.py createdfiles.txt totalsims.txt finished.txt` within a folder that also contains the `results/` folder. 
+- `reduce.py` is meant to be used with `finalresults.csv` files created by `pipeline.sh`. This python script creates two data files, `tr_finalresults.csv` and `gt_finalresults.csv`. The reduced data files contain Center of Mass, Number of Planets, Mass budget for planets, Mass efficiency (mass budget/disk mass), Sigmag0 (maximum solid surface density), Disk Mass, Characteristic radius, Stellar Mass, Metallicity and Gas depletion timescale information for each simulation. `tr_finalresults.txt` has this information for planets below 10 earth masses, and `gt_finalresults.txt` for planets above 10 earth masses. It should be used as `python reduce.py finalresults.csv`. 
 
-https://arxiv.org/pdf/1106.3281.pdf
-https://arxiv.org/pdf/1112.2349.pdf
+## References
+- Planet formation model (Y. Miguel) https://arxiv.org/pdf/1106.3281.pdf
+- Models of population synthesis (W. Benz et al) https://arxiv.org/pdf/1402.7086.pdf
+- Perturbation model (P. Pinilla) https://arxiv.org/pdf/1112.2349.pdf
