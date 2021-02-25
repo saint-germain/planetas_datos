@@ -57,3 +57,21 @@ The following sections explain how to use the scripts for processing simulation 
 - Planet formation model (Y. Miguel) https://arxiv.org/pdf/1106.3281.pdf
 - Models of population synthesis (W. Benz et al) https://arxiv.org/pdf/1402.7086.pdf
 - Perturbation model (P. Pinilla) https://arxiv.org/pdf/1112.2349.pdf
+
+## _pert.csv -> from post-processing
+
+- 'ident': Unique system identifier
+- 'com': Center of mass (AU)
+- 'nplanets': Total number of planets
+- 'massbudget': Total planetary mass (M_earth)
+- 'massefficiency': Amount of disk mass that went into planets
+- 'sigmag0': 
+- 'md': Disk mass (M_sun)
+- 'rc': Disk cutoff radius (AU)
+- 'ms': Stellar mass (M_sun)
+- 'metal': Metallicity 
+- 'taugas': gas dissipation timescale
+- 'qest': Toomre Q
+- 'ngi': Number of giant planets
+- 'mtr': Total terrestrial planet mass
+- 'apert': Perturbation amplitude
